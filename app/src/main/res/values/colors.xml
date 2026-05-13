@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="medi_blue">#FF1976D2</color>
+    <color name="medi_blue_light">#FF63A4FF</color>
+    <color name="medi_blue_dark">#FF004BA0</color>
+    <color name="medi_green">#FF4CAF50</color>
+    <color name="ic_launcher_background">#FAF2E1</color>
+    <color name="splash_background">#fffbf2</color>
+</resources>
