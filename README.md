@@ -1,4 +1,4 @@
-# PamAssist 🩺
+# PamAssist 🩺💊
 Positive Aging Mission - Offline AI medical assistant powered by Gemma 4 + Cactus
 
 **An offline-first AI medical assistant powered by Gemma 4 E2B + Cactus, 
