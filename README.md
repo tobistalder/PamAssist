@@ -78,20 +78,29 @@ for a personalized 4-sentence safety analysis.
 ---
 
 ## Architecture
-UI (Jetpack Compose)
-│
-▼
-ViewModels (ChatViewModel, ScanViewModel, MedicationsViewModel)
-│
-├── CactusManager (Gemma 4 inference, system prompt, streaming)
-│       └── Cactus.kt (JNI bridge → libcactus.so)
-│
-├── Room Database (UserProfile, Medications)
-│
-├── AlarmScheduler (AlarmManager, offline reminders)
-│
-└── ML Kit OCR + CameraX (product label pipeline)
 
+```
+┌─────────────────────────────────────┐
+│         UI (Jetpack Compose)        │
+└────────────────┬────────────────────┘
+                 │
+┌────────────────▼────────────────────┐
+│           ViewModels                │
+│  ChatViewModel · ScanViewModel      │
+│  MedicationsViewModel               │
+└──┬─────────────┬──────────────┬─────┘
+   │             │              │
+┌──▼──────┐ ┌───▼────┐ ┌───────▼──────┐
+│ Cactus  │ │  Room  │ │    ML Kit    │
+│ Manager │ │  DB    │ │  OCR+CameraX │
+│ Gemma 4 │ │        │ │              │
+└──┬──────┘ └───┬────┘ └──────────────┘
+   │            │
+┌──▼──────┐ ┌───▼──────────┐
+│Cactus.kt│ │AlarmScheduler│
+│JNI─.so  │ │(offline)     │
+└─────────┘ └──────────────┘
+```
 ---
 
 ## Tech Stack
