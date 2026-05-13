@@ -35,3 +35,6 @@ google-services.json
 app/src/main/jniLibs/
 logcat*.txt
 gradle/wrapper/temp/
+device_logcat.txt
+logcat_main.txt
+logcat_utf8.txt
